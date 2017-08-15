@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = 'Add item to cart with using AJAX'
   s.required_ruby_version = '>= 2.0.0'
 
-  s.author    = 'Denis Gukov'
-  s.email     = 'denguk@gmail.com'
+  s.author    = 'Lareb Nawab'
+  s.email     = 'lareb.indore@gmail.com'
   s.homepage  = 'http://www.spreecommerce.com'
 
   #s.files       = `git ls-files`.split("\n")

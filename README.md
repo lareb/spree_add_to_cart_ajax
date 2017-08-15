@@ -3,6 +3,7 @@ spree_add_to_cart_ajax extension
 
 * Adds button 'Add to cart' for each product on Products list page.
 * Puts product to cart over AJAX without overloading a page.
+* Use /spree/products/ajax_cart partial for other pages
 
 Demo: [https://spreecommerce-demo.herokuapp.com](https://spreecommerce-demo.herokuapp.com)
 
@@ -14,7 +15,7 @@ Installation
 Add spree_add_to_cart_ajax to your Gemfile:
 
 ```ruby
-gem 'spree_add_to_cart_ajax', github: 'fiftin/spree_add_to_cart_ajax'
+gem 'spree_add_to_cart_ajax', github: 'lareb/spree_add_to_cart_ajax'
 ```
 
 Bundle your dependencies and run the installation generator:
