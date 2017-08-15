@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.0'
+  s.add_dependency 'solidus_core', '~> 1.4'
   s.add_dependency 'jquery-form-rails'
 
   s.add_development_dependency 'capybara', '~> 2.4'
