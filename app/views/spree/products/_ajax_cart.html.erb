@@ -1,0 +1,23 @@
+<%= form_for :order, :url => populate_orders_path, html: { class: 'add_to_cart_products__form' } do |f| %>
+  <%= hidden_field_tag "variant_id", product.master.id %>
+  <%= hidden_field_tag :back, true %>
+  <% if product.price_in(current_currency) and !product.price.nil? %>
+    <% if product.variants.size > 1 || product.master.can_supply? %>
+      <%= hidden_field_tag :quantity, 1, class: 'title form-control', min: 1, step: 1 %>
+        <%= button_tag class: 'btn btn-default add-to-cart', type: :submit do %>
+          <i class='fa fa-shopping-cart'></i>Add to cart</a>
+        <% end %>
+    <% else %>
+      <div class="out-of-stock"><%= Spree.t(:out_of_stock) %></div>
+    <% end %>
+  <% else %>
+    <div id="product-price">
+      <div><span class="price selling" itemprop="price"><%= Spree.t('product_not_available_in_this_currency') %></span></div>
+    </div>
+  <% end %>
+<% end %>
+<script>
+  $(function() {
+    $('.add_to_cart_products__form').addToCartAjaxForm();
+  });
+</script>
